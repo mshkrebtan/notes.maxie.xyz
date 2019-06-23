@@ -18,7 +18,9 @@ module.exports = {
             '/privacy/': [
                 'spoof-your-browser-platform'
             ]
-        }
+        },
+
+        lastUpdated: 'Last Updated',
     },
 
     markdown: {
