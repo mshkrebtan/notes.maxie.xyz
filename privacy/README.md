@@ -1,0 +1,3 @@
+# Privacy
+
+Notes on privacy.
