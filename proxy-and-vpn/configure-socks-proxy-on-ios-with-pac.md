@@ -33,7 +33,6 @@ And here is an example of a virtual server configuration in Nginx:
     <div style="margin-left: auto; margin-right: auto; width: 50%">
       <img src="./img/ios-wi-fi-network_framed.png"
            alt="iOS Wi-Fi network settings" 
-           width="320"
       />
     </div>
 
@@ -49,7 +48,6 @@ And here is an example of a virtual server configuration in Nginx:
     <div style="margin-left: auto; margin-right: auto; width: 50%">
       <img src="./img/ios-proxy-configuration_framed.png"
            alt="iOS proxy confguration" 
-           width="320"
       />
     </div>
 
