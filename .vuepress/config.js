@@ -7,6 +7,7 @@ module.exports = {
         nav: [
             { text: 'Kindle', link: '/kindle/'},
             { text: 'Privacy', link: '/privacy/'},
+            { text: 'Proxy & VPN', link: '/proxy-and-vpn/'},
         ],
 
         sidebarDepth: '4',
@@ -17,6 +18,9 @@ module.exports = {
             ],
             '/privacy/': [
                 'spoof-your-browser-platform'
+            ],
+            '/proxy-and-vpn/': [
+                'configure-socks-proxy-on-ios-with-pac'
             ]
         },
 
