@@ -1,4 +1,4 @@
-# Spoof Your Browser Platform
+# Spoof your browser's platform
 
 Say, you want to hide from websites the fact that you are using a Mac or a
 Windows (or some other) machine. To do this you need to override the following
@@ -37,5 +37,5 @@ I set them as like I am using a Linux machine:
 
 You may use these services to see what information a website retrieves from you
 browser:
-   - http://yandex.ru/internet
-   - http://browserspy.dk/os.php
+   - <http://yandex.ru/internet>
+   - <http://browserspy.dk/os.php>
