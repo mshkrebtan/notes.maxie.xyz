@@ -1,6 +1,5 @@
----
-home: true
-actionText: Go to notes →
-actionLink: /kindle/
----
+# Maxie's Notes
 
+Maksim Shkrebtan’s personal documentation website.
+
+---
