@@ -25,6 +25,22 @@ module.exports = {
           '/proxy-and-vpn/configure-socks-proxy-on-ios-with-pac',
           '/proxy-and-vpn/simple-dante-configuration'
         ]
+      },
+      {
+        title: 'Linux',
+        children: [
+          '/linux/change-intel-i915-s-pwm-frequency-on-boot'
+        ]
+      },
+      {
+        title: 'macOS',
+        path: '/macos/',
+        children: [
+          '/macos/mount-ntfs-volume-for-writing',
+          '/macos/temporarily-prevent-mac-from-sleeping',
+          '/macos/silence-the-startup-chime',
+          '/macos/batch-convert-doc-to-pdf-with-libreoffice'
+        ]
       }
     ],
 

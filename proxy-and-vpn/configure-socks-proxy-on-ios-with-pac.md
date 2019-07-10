@@ -1,4 +1,4 @@
-# Configure SOCKS proxy on iOS with PAC
+# Configure SOCKS Proxy on iOS with PAC
 
 Sometimes you might need to access certain websites via proxy, for example when
 they are blocked in your country. In the same time, you can avoid passing all

@@ -1,4 +1,4 @@
-# Configure Dante SOCKS-server to access blocked web-services
+# Configure Dante SOCKS-server to Access Blocked Web-services
 
 
 ## Install Dante — a free SOCKS server

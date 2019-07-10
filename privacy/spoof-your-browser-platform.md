@@ -1,4 +1,4 @@
-# Spoof your browser's platform
+# Spoof Your Browser's Platform
 
 Say, you want to hide from websites the fact that you are using a Mac or a
 Windows (or some other) machine. To do this you need to override the following
