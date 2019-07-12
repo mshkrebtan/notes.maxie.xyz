@@ -14,3 +14,13 @@ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3s1 ~/ntfs-volume
 - Mounty for NTFS
 
     <https://mounty.app/>
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

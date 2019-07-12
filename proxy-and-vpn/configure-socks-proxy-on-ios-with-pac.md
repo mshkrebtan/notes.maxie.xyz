@@ -32,7 +32,7 @@ And here is an example of a virtual server configuration in Nginx:
 
     <div style="margin-left: auto; margin-right: auto; width: 50%">
       <img src="./img/ios-wi-fi-network_framed.png"
-           alt="iOS Wi-Fi network settings" 
+           alt="iOS Wi-Fi network settings"
       />
     </div>
 
@@ -47,7 +47,7 @@ And here is an example of a virtual server configuration in Nginx:
 
     <div style="margin-left: auto; margin-right: auto; width: 50%">
       <img src="./img/ios-proxy-configuration_framed.png"
-           alt="iOS proxy confguration" 
+           alt="iOS proxy confguration"
       />
     </div>
 
@@ -61,3 +61,13 @@ And here is an example of a virtual server configuration in Nginx:
 - Change in iOS 10.2 and Greater Proxy pac Files [David's Public Pages]
 
     <https://blog.remyservices.net/technology/blog/2017_2_20>
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

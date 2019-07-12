@@ -19,3 +19,13 @@ To get more on `soffice`:
 ``` bash
 soffice --help
 ```
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

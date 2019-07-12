@@ -39,3 +39,13 @@ You may use these services to see what information a website retrieves from you
 browser:
    - <http://yandex.ru/internet>
    - <http://browserspy.dk/os.php>
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

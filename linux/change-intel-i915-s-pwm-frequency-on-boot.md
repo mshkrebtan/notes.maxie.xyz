@@ -41,3 +41,13 @@ i915](http://devbraindom.blogspot.ru/2013/03/eliminate-led-screen-flicker-with-i
 - Random thoughts: Eliminate LED screen flicker with Intel i915
 
     <http://devbraindom.blogspot.com/2013/03/eliminate-led-screen-flicker-with-intel.html>
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

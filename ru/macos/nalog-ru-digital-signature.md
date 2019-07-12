@@ -237,3 +237,13 @@ not secure_, так как браузеру ничего не известно �
 компьютеру.
 
 ![macOS Firefox — Личный кабинет ИП](./img/firefox-lkipgost.png)
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" language="ru"/>
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Разрешите загрузку JavaScript с домена disqus.com, чтобы увидеть комментарии.
+</div>

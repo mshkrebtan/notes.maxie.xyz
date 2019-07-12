@@ -26,3 +26,13 @@ I have also made a simple [Automator
 workflow](/files/kindle/kindlegen.workflow.zip) that allows to
 convert books within Finder.
 :::
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

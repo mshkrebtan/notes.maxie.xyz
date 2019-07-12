@@ -38,7 +38,6 @@ module.exports = {
           },
           {
             title: 'macOS',
-            path: '/macos/',
             children: [
               '/macos/mount-ntfs-volume-for-writing',
               '/macos/temporarily-prevent-mac-from-sleeping',
@@ -57,7 +56,6 @@ module.exports = {
         sidebar: [
           {
             title: 'macOS',
-            path: '/ru/macos/',
             children: [
               '/ru/macos/nalog-ru-digital-signature'
             ]
@@ -70,14 +68,12 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: [
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-142563675-1'
-      }
-    ]
-  ],
+  plugins: {
+    '@vuepress/google-analytics': {
+      'ga': 'UA-142563675-1'
+    },
+    'disqus': {}
+  },
   locales: {
     '/': {
       lang: 'en-GB',

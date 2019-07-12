@@ -25,3 +25,12 @@ run the `convert` subcommand and specify the output file type. For example:
 fb2c --config /opt/fb2c/configuration.toml convert --to mobi .
 ```
 
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>

@@ -63,3 +63,13 @@ Finally, block all the other requests:
 - Telegram calls via Dante socks5 proxy server not working - Stack Overflow
 
     <https://stackoverflow.com/questions/49855516/telegram-calls-via-dante-socks5-proxy-server-not-working>
+
+<br/>
+<ClientOnly>
+<Disqus shortname="notes-maxie-xyz" />
+</ClientOnly>
+
+<br/>
+<div style="text-align: center; font-size: x-small">
+    Allow loading scripts from disqus.com to see the comments.
+</div>
