@@ -64,7 +64,7 @@ And here is an example of a virtual server configuration in Nginx:
 
 <br/>
 <ClientOnly>
-<Disqus shortname="notes-maxie-xyz" />
+<Disqus shortname="notes-maxie-xyz" language="en"/>
 </ClientOnly>
 
 <br/>

@@ -29,7 +29,7 @@ convert books within Finder.
 
 <br/>
 <ClientOnly>
-<Disqus shortname="notes-maxie-xyz" />
+<Disqus shortname="notes-maxie-xyz" language="en"/>
 </ClientOnly>
 
 <br/>

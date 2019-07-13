@@ -17,7 +17,7 @@ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3s1 ~/ntfs-volume
 
 <br/>
 <ClientOnly>
-<Disqus shortname="notes-maxie-xyz" />
+<Disqus shortname="notes-maxie-xyz" language="en"/>
 </ClientOnly>
 
 <br/>

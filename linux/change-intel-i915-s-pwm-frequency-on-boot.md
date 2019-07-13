@@ -44,7 +44,7 @@ i915](http://devbraindom.blogspot.ru/2013/03/eliminate-led-screen-flicker-with-i
 
 <br/>
 <ClientOnly>
-<Disqus shortname="notes-maxie-xyz" />
+<Disqus shortname="notes-maxie-xyz" language="en"/>
 </ClientOnly>
 
 <br/>

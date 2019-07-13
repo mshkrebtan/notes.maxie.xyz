@@ -11,6 +11,13 @@ module.exports = {
         sidebarDepth: '4',
         sidebar: [
           {
+            title: 'Audio',
+            children: [
+              '/audio/downsample-audio-with-sox',
+              '/audio/dsd-to-pcm-conversion-with-ffmpeg'
+            ]
+          },
+          {
             title: 'Kindle',
             children: [
               '/kindle/best-way-to-convert-fb2-to-mobi',

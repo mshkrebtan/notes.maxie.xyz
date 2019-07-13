@@ -27,7 +27,7 @@ fb2c --config /opt/fb2c/configuration.toml convert --to mobi .
 
 <br/>
 <ClientOnly>
-<Disqus shortname="notes-maxie-xyz" />
+<Disqus shortname="notes-maxie-xyz" language="en"/>
 </ClientOnly>
 
 <br/>
