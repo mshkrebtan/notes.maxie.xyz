@@ -9,6 +9,7 @@
     "build": "vuepress build"
   },
   "dependencies": {
+    "vuepress-plugin-clean-urls": "^1.0.3",
     "vuepress-plugin-container": "^2.0.2"
   }
 }
