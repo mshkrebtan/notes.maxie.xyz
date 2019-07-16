@@ -13,8 +13,9 @@ module.exports = {
           {
             title: 'Audio',
             children: [
+              '/audio/edit-encoded-audio-with-ffmpeg-and-audacity',
               '/audio/downsample-audio-with-sox',
-              '/audio/dsd-to-pcm-conversion-with-ffmpeg'
+              '/audio/dsd-to-pcm-conversion-with-ffmpeg',
             ]
           },
           {
@@ -75,12 +76,21 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: {
-    '@vuepress/google-analytics': {
+  plugins: [
+    ['@vuepress/google-analytics', {
       'ga': 'UA-142563675-1'
-    },
-    'disqus': {}
-  },
+    }],
+    ['disqus', {}],
+    ['container', {
+      type: 'output',
+      defaultTitle: {
+        '/': 'Output',
+        '/ru/': 'Вывод'
+      },
+      before: info => `<div class="output"><p class="title">${info}</p>`,
+      after: '</div>',
+    }]
+  ],
   locales: {
     '/': {
       lang: 'en-GB',

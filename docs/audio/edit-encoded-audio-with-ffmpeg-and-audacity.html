@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Edit Encoded Audio with FFmpeg and Audacity | Maxie’s Notes</title>
+    <meta name="description" content="Maksim Shkrebtan’s personal documentation website">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.3d7f8a6f.css" as="style"><link rel="preload" href="/assets/js/app.3cb9bcf6.js" as="script"><link rel="preload" href="/assets/js/2.893e48e4.js" as="script"><link rel="preload" href="/assets/js/6.374de430.js" as="script"><link rel="prefetch" href="/assets/js/10.8839a986.js"><link rel="prefetch" href="/assets/js/11.9acd2a85.js"><link rel="prefetch" href="/assets/js/12.e1942578.js"><link rel="prefetch" href="/assets/js/13.08625b56.js"><link rel="prefetch" href="/assets/js/14.1936d6f7.js"><link rel="prefetch" href="/assets/js/15.30e47526.js"><link rel="prefetch" href="/assets/js/16.8d2abff6.js"><link rel="prefetch" href="/assets/js/17.9b8f0b8a.js"><link rel="prefetch" href="/assets/js/18.c8819566.js"><link rel="prefetch" href="/assets/js/19.240221ce.js"><link rel="prefetch" href="/assets/js/20.2076e426.js"><link rel="prefetch" href="/assets/js/21.083328dc.js"><link rel="prefetch" href="/assets/js/22.7d3562e1.js"><link rel="prefetch" href="/assets/js/23.0c514679.js"><link rel="prefetch" href="/assets/js/24.e7686a77.js"><link rel="prefetch" href="/assets/js/25.93f0981c.js"><link rel="prefetch" href="/assets/js/26.ef72e736.js"><link rel="prefetch" href="/assets/js/3.868b340d.js"><link rel="prefetch" href="/assets/js/4.eaf5df3f.js"><link rel="prefetch" href="/assets/js/5.8ae27e58.js"><link rel="prefetch" href="/assets/js/7.cc4d9c18.js"><link rel="prefetch" href="/assets/js/8.ba0302e0.js"><link rel="prefetch" href="/assets/js/9.34fa5ad7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3d7f8a6f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Maxie’s Notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/ru/" class="nav-link">Русский</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/ru/" class="nav-link">Русский</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Audio</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html" class="active sidebar-link">Edit Encoded Audio with FFmpeg and Audacity</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#installation" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#ffmpeg" class="sidebar-link">FFmpeg</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#audacity" class="sidebar-link">Audacity</a></li></ul></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#quick-introduction-to-ffmpeg" class="sidebar-link">Quick introduction to FFmpeg</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#terminology" class="sidebar-link">Terminology</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#list-all-formats-actually-muxers" class="sidebar-link">List all formats (actually, muxers)</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#list-all-codecs" class="sidebar-link">List all codecs</a></li></ul></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#edit-encoded-audio" class="sidebar-link">Edit encoded audio</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#probe-the-file" class="sidebar-link">Probe the file</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#decode" class="sidebar-link">Decode</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#edit" class="sidebar-link">Edit</a></li><li class="sidebar-sub-header"><a href="/audio/edit-encoded-audio-with-ffmpeg-and-audacity.html#encode-back" class="sidebar-link">Encode back</a></li></ul></li></ul></li><li><a href="/audio/downsample-audio-with-sox.html" class="sidebar-link">Downsample Audio with SoX</a></li><li><a href="/audio/dsd-to-pcm-conversion-with-ffmpeg.html" class="sidebar-link">DSD to PCM Conversion with FFmpeg</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Kindle</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Privacy</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Proxy &amp; VPN</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>macOS</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="edit-encoded-audio-with-ffmpeg-and-audacity"><a href="#edit-encoded-audio-with-ffmpeg-and-audacity" aria-hidden="true" class="header-anchor">#</a> Edit Encoded Audio with FFmpeg and Audacity</h1> <h2 id="installation"><a href="#installation" aria-hidden="true" class="header-anchor">#</a> Installation</h2> <h3 id="ffmpeg"><a href="#ffmpeg" aria-hidden="true" class="header-anchor">#</a> FFmpeg</h3> <h4 id="macos"><a href="#macos" aria-hidden="true" class="header-anchor">#</a> macOS</h4> <p>Get <a href="http://brew.sh" target="_blank" rel="noopener noreferrer">Homebrew<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> if you have not installed it yet. Then run:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>brew install ffmpeg
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="tip custom-block"><p class="custom-block-title">Tip</p> <p>FFmpeg brew formula has many options, e. g. <code>--with-opencore-amr</code>. To get all
+the information about the formula, run:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>brew info ffmpeg | less
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <h4 id="other-platforms"><a href="#other-platforms" aria-hidden="true" class="header-anchor">#</a> Other platforms</h4> <p>Download from <a href="https://www.ffmpeg.org/download.html" target="_blank" rel="noopener noreferrer">https://www.ffmpeg.org/download.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h3 id="audacity"><a href="#audacity" aria-hidden="true" class="header-anchor">#</a> Audacity</h3> <p>Download from <a href="http://www.audacityteam.org/download/" target="_blank" rel="noopener noreferrer">http://www.audacityteam.org/download/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <p>Then download Audacity-compatible FFmpeg 2.3.<em>x</em> shared libraries. See more
+<a href="http://manual.audacityteam.org/man/faq_installation_and_plug_ins.html#ffdown" target="_blank" rel="noopener noreferrer">here<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h2 id="quick-introduction-to-ffmpeg"><a href="#quick-introduction-to-ffmpeg" aria-hidden="true" class="header-anchor">#</a> Quick introduction to FFmpeg</h2> <h3 id="terminology"><a href="#terminology" aria-hidden="true" class="header-anchor">#</a> Terminology</h3> <div class="tip custom-block"><ul><li><p><strong>Format</strong> describes a container.</p></li> <li><p><strong>Coder</strong> encodes raw data (packets) and puts it in a container.</p></li> <li><p><strong>Muxers</strong> take encoded data in the form of AVPackets and write it into files
+or other output byte streams in the specified container format.</p></li> <li><p><strong>Decoder</strong> decodes (demuxes) lossy or lossless compressed data stored in a
+container.</p></li> <li><p><strong>Demuxers</strong> read a media file and split it into chunks of data (packets).</p></li></ul> <p>There can be multiple codecs for the same format. If you don't specify what
+codec to use, ffmpeg will use the format's default codec.</p></div> <h3 id="list-all-formats-actually-muxers"><a href="#list-all-formats-actually-muxers" aria-hidden="true" class="header-anchor">#</a> List all formats (actually, muxers)</h3> <p>Run:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -formats
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>or better:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -hide_banner -formats
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code> D. = Demuxing supported
+ .E = Muxing supported
+ --
+ D  3dostr          3DO STR
+  E 3g2             3GP2 (3GPP2 file format)
+  E 3gp             3GP (3GPP file format)
+ D  4xm             4X Technologies
+  E a64             a64 - video for Commodore 64
+ D  aa              Audible AA format files
+...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div><ul><li><em>D</em> stands for decoding/demuxing.</li> <li><em>E</em> stands for encoding/muxing.</li></ul> <h3 id="list-all-codecs"><a href="#list-all-codecs" aria-hidden="true" class="header-anchor">#</a> List all codecs</h3> <p>Run:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -codecs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>or better:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -hide_banner -codecs
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>Codecs:
+ D..... = Decoding supported
+ .E.... = Encoding supported
+ ..V... = Video codec
+ ..A... = Audio codec
+ ..S... = Subtitle codec
+ ...I.. = Intra frame-only codec
+ ....L. = Lossy compression
+ .....S = Lossless compression
+ -------
+ D.VI.. 012v                 Uncompressed 4:2:2 10-bit
+ D.V.L. 4xm                  4X Movie
+ D.VI.S 8bps                 QuickTime 8BPS video
+ .EVIL. a64_multi            Multicolor charset for Commodore 64 (encoders: a64multi )
+ .EVIL. a64_multi5           Multicolor charset for Commodore 64, extended with 5th color (colram) (encoders: a64multi5 )
+ D.V..S aasc                 Autodesk RLE
+ D.VIL. aic                  Apple Intermediate Codec
+ DEVI.S alias_pix            Alias/Wavefront PIX image
+ DEVIL. amv                  AMV Video
+ D.V.L. anm                  Deluxe Paint Animation
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></div><p>Some codecs cannot encode, i. e. they are just decoders.
+Some codecs cannot decode, i. e. they are just coders.</p> <hr> <p>The <code>amr</code> format is supported as well:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -hide_banner -formats | grep -i amr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code> DE amr             3GPP AMR
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div><p>It is supported by 2 codes:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -hide_banner -codecs | grep -i amr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code> DEA.L. amr_nb               AMR-NB (Adaptive Multi-Rate NarrowBand) (decoders: amrnb amr_nb_at libopencore_amrnb ) (encoders: libopencore_amrnb )
+ D.A.L. amr_wb               AMR-WB (Adaptive Multi-Rate WideBand) (decoders: amrwb libopencore_amrwb )
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div><h2 id="edit-encoded-audio"><a href="#edit-encoded-audio" aria-hidden="true" class="header-anchor">#</a> Edit encoded audio</h2> <p>Let us cut a section from an <code>.amr</code> audio stored in a file with the name
+<code>incondite.amr</code>. It was recorded on an Android device. This means we'd better
+use the <code>opencore-amr</code> codecs — audio codecs extracted from Android Open Source
+Project, which should be installed along with FFmpeg.</p> <h3 id="probe-the-file"><a href="#probe-the-file" aria-hidden="true" class="header-anchor">#</a> Probe the file</h3> <p>Get the basic information, such as sample rate or number of channels.</p> <p>With <code>ffprobe</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffprobe incondite.amr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>[amr @ 0x7f9a25000000] Estimating duration from bitrate, this may be inaccurate
+Input #0, amr, from 'incondite.amr':
+
+    Stream #0:0: Audio: amr_nb (samr / 0x726D6173), 8000 Hz, mono, flt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div><p>As this <code>incodite.amr</code> file came from an Android device, better specify the
+<code>libopencore_amrnb</code> codec for probing. But this won't work with <code>ffprobe</code> for
+some reason. Well, we can use <code>ffmpeg</code>, like this:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -acodec libopencore_amrnb -i incondite.amr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>[amr @ 0x7fb42c000000] Estimating duration from bitrate, this may be inaccurate
+Input #0, amr, from 'incondite.amr':
+
+    Stream #0:0: Audio: amr_nb (samr / 0x726D6173), 8000 Hz, mono, s16
+At least one output file must be specified
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div><p>Different in this output is the <code>sample_fmt</code> — <code>s16</code> vs. <code>flt</code>. I assume the
+opencore-amr probe is more correct.</p> <div class="tip custom-block"><p class="custom-block-title">Tip</p> <p>To see all the sample formats run:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg -sample_fmts
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Output:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>name   depth
+u8        8
+s16      16
+s32      32
+flt      32
+dbl      64
+u8p       8
+s16p     16
+s32p     32
+fltp     32
+dblp     64
+s64      64
+s64p     64
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>The letters mean:</p> <ul><li><code>u</code> — <strong>u</strong>nsigned,</li> <li><code>s</code> — <strong>s</strong>igned,</li> <li><code>flt</code> — <strong>fl</strong>oa<strong>t</strong>,</li> <li><code>dbl</code> - <strong>d</strong>ou<strong>bl</strong>e,</li> <li><code>p</code> — <strong>p</strong>lanar.</li></ul> <p>For planar sample formats, each audio channel is in a separate data plane, and
+linesize is the buffer size, in bytes, for a single plane. All data planes must
+be the same size. For packed sample formats, only the first data plane is used,
+and samples for each channel are interleaved. In this case, linesize is the
+buffer size, in bytes, for the 1 plane.</p></div> <p>Back to the probe results:</p> <ul><li>8000 Hz — the <strong>sample rate</strong>,</li> <li>mono — means <strong>1 channel</strong>,</li> <li>s16 — the <strong>sample format</strong> (expressed by native C types).</li></ul> <h3 id="decode"><a href="#decode" aria-hidden="true" class="header-anchor">#</a> Decode</h3> <p>Okay, now as we know the audio parameters let us decode the
+<code>incondite.amr</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg \
+  -acodec libopencore_amrnb \
+  -i incondite.amr \
+  -ar 8000 \
+  -ac 1 \
+  -f s16le \
+  incondite.raw
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>The options mean:</p> <ul><li><code>-acodec</code> or <code>-codec:a</code> — the audio codec (if it stands before the <code>-i</code>
+option it defines the decoder);</li> <li><code>-i</code> — the input file;</li> <li><code>-ar</code> — the audio sampling frequency (sample rate);</li> <li><code>-ac</code> — the number of channels;</li> <li><code>-f</code> — format.</li></ul> <p>See more on audio options <a href="https://ffmpeg.org/ffmpeg.html#Audio-Options" target="_blank" rel="noopener noreferrer">here<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <p>Format <code>s16le</code> means <em>PCM signed 16-bit little-endian</em>. The output will be a
+container with raw data (in the <em>s16le</em> format) as we do not specify any codec
+(encoder).</p> <p>Let's run the command above and see the output:</p> <div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code> 1  [amr @ 0x7f9cfa000000] Estimating duration from bitrate, this may be inaccurate
+ 2  Input #0, amr, from 'incondite.amr':
+
+ 4      Stream #0:0: Audio: amr_nb (samr / 0x726D6173), 8000 Hz, mono, s16
+ 5  Output #0, s16le, to 'incondite.raw':
+ 6    Metadata:
+ 7      encoder         : Lavf57.56.100
+ 8      Stream #0:0: Audio: pcm_s16le, 8000 Hz, mono, s16, 128 kb/s
+ 9      Metadata:
+10        encoder         : Lavc57.64.101 pcm_s16le
+11  Stream mapping:
+12    Stream #0:0 -&gt; #0:0 (amr_nb (libopencore_amrnb) -&gt; pcm_s16le (native))
+13  Press [q] to stop, [?] for help
+14  incondite.amr: Input/output errorbitrate= 128.0kbits/s speed= 503x
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></div><p>Oops! There is an error on line 14. What is wrong? Well, let us run the same
+command again but with the <code>-v</code> (verbose) option set to <code>debug</code>:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg \
+  -v debug \
+  -acodec libopencore_amrnb \
+  -i incondite.amr \
+  -ar 8000 \
+  -ac 1 \
+  -f s16le \
+  incondite.raw
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="output"><p class="title">Output:</p><div class="language- line-numbers-mode"><pre class="language-text"><code>24  Opening an input file: incondite.amr.
+25  [file @ 0x7fd2054051c0] Setting default whitelist 'file,crypto'
+26  [amr @ 0x7fd206004200] Format amr probed with size=2048 and score=100
+27  [amr @ 0x7fd206004200] Before avformat_find_stream_info() pos: 6 bytes read:32768 seeks:0 nb_streams:1
+28  [amr @ 0x7fd206004200] All info found
+29  [amr @ 0x7fd206004200] Estimating duration from bitrate, this may be inaccurate
+30  [amr @ 0x7fd206004200] After avformat_find_stream_info() pos: 1606 bytes read:32768 seeks:0 frames:50
+31  Input #0, amr, from 'incondite.amr':
+
+33      Stream #0:0, 50, 1/8000: Audio: amr_nb (samr / 0x726D6173), 8000 Hz, mono, s16
+
+53  Output #0, s16le, to 'incondite.raw':
+54    Metadata:
+55      encoder         : Lavf57.56.100
+56      Stream #0:0, 0, 1/8000: Audio: pcm_s16le, 8000 Hz, mono, s16, 128 kb/s
+57      Metadata:
+58        encoder         : Lavc57.64.101 pcm_s16le
+59  Stream mapping:
+60    Stream #0:0 -&gt; #0:0 (amr_nb (libopencore_amrnb) -&gt; pcm_s16le (native))
+61  Press [q] to stop, [?] for help
+62  cur_dts is invalid (this is harmless if it occurs once at the start per stream)
+incondite.amr: Input/output errorbitrate= 128.0kbits/s speed= 159x
+64  [output stream 0:0 @ 0x7fd205603b00] EOF on sink link output stream 0:0:default.
+65  No more output streams to write to, finishing.
+
+68  Input file #0 (incondite.amr):
+69    Input stream #0:0 (audio): 49713 packets read (1590816 bytes); 49713 frames decoded (7954080 samples);
+70    Total: 49713 packets (1590816 bytes) demuxed
+71  Output file #0 (incondite.raw):
+72    Output stream #0:0 (audio): 49713 frames encoded (7954080 samples); 49713 packets muxed (15908160 bytes);
+73    Total: 49713 packets (15908160 bytes) muxed
+74  49713 frames successfully decoded, 0 decoding errors
+75  [AVIOContext @ 0x7fd205700080] Statistics: 0 seeks, 49713 writeouts
+76  [AVIOContext @ 0x7fd205506840] Statistics: 1590822 bytes read, 0 seeks
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div></div><p>And here wee see the reason and the explanation in parenthesis on line 62:</p> <div class="output"><p class="title"></p><div class="language- line-numbers-mode"><pre class="language-text"><code>62  cur_dts is invalid (this is harmless if it occurs once at the start per stream)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div><p>It's nothing.</p> <p>In the end, we have the statistics:</p> <div class="output"><p class="title"></p><div class="language- line-numbers-mode"><pre class="language-text"><code>74  49713 frames successfully decoded, 0 decoding errors
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div><h3 id="edit"><a href="#edit" aria-hidden="true" class="header-anchor">#</a> Edit</h3> <p>Import in Audacity, open waveform (dB), fit vertically, cut the unnecessary,
+export as raw:</p> <p><img src="/assets/img/audacity-cut.c32e5412.png" alt="Audacity: Waveform (dB)"></p> <h3 id="encode-back"><a href="#encode-back" aria-hidden="true" class="header-anchor">#</a> Encode back</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>ffmpeg \
+  -v verbose \
+  -ar 8000 \
+  -ac 1 \
+  -f s16le \
+  -i cut.raw \
+  -acodec libopencore_amrnb \
+  cut.amr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><br> <!----> <br> <div style="text-align:center;font-size:x-small;">
+    Allow loading scripts from disqus.com to see the comments.
+</div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/audio/downsample-audio-with-sox.html">
+          Downsample Audio with SoX
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3cb9bcf6.js" defer></script><script src="/assets/js/2.893e48e4.js" defer></script><script src="/assets/js/6.374de430.js" defer></script>
+  </body>
+</html>
