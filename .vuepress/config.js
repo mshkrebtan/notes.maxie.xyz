@@ -89,8 +89,7 @@ module.exports = {
       },
       before: info => `<div class="output"><p class="title">${info}</p>`,
       after: '</div>',
-    }],
-    ['clean-urls', {}]
+    }]
   ],
   locales: {
     '/': {
