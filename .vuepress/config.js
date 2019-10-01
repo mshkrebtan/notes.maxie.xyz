@@ -8,11 +8,12 @@ module.exports = {
       '/': {
         selectText: 'Languages',
         label: 'English',
-        sidebarDepth: '4',
+        sidebarDepth: '5',
         sidebar: [
           {
             title: 'Audio',
             children: [
+              '/audio/bit-perfect-hi-res-audio-player-on-linux-with-mpd',
               '/audio/edit-encoded-audio-with-ffmpeg-and-audacity',
               '/audio/downsample-audio-with-sox',
               '/audio/dsd-to-pcm-conversion-with-ffmpeg',
