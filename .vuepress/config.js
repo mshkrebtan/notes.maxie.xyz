@@ -8,7 +8,7 @@ module.exports = {
       '/': {
         selectText: 'Languages',
         label: 'English',
-        sidebarDepth: '5',
+        sidebarDepth: '6',
         sidebar: [
           {
             title: 'Audio',
@@ -61,7 +61,7 @@ module.exports = {
       '/ru/': {
         selectText: 'Языки',
         label: 'Русский',
-        sidebarDepth: '4',
+        sidebarDepth: '5',
         sidebar: [
           {
             title: 'macOS',
@@ -75,7 +75,10 @@ module.exports = {
     }
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    extendMarkdown: md => {
+      md.use(require('markdown-it-vuepress-code-snippet-enhanced'))
+    }
   },
   plugins: [
     ['@vuepress/google-analytics', {

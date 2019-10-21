@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
+    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
     "vuepress": "^1.0.2",
     "vuepress-plugin-disqus": "^0.1.1"
   },
