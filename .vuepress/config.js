@@ -8,6 +8,7 @@ module.exports = {
       '/': {
         selectText: 'Languages',
         label: 'English',
+        lastUpdated: true,
         sidebarDepth: '6',
         sidebar: [
           {
@@ -59,6 +60,7 @@ module.exports = {
       '/ru/': {
         selectText: 'Языки',
         label: 'Русский',
+        lastUpdated: 'Обновлено',
         sidebarDepth: '5',
         sidebar: [
           {
@@ -82,7 +84,7 @@ module.exports = {
       transformer: (timestamp, lang) => {
         const moment = require('moment')
         moment.locale(lang)
-        return moment(timestamp).defaultFormatUtc
+        return moment(timestamp).toISOString()
       }
     }],
     ['@vuepress/google-analytics', {
@@ -99,7 +101,8 @@ module.exports = {
       after: '</div>',
     }],
     ['sitemap', {
-      'hostname': 'https://notes.maxie.xyz'
+      'hostname': 'https://notes.maxie.xyz',
+      'exclude': ['/404.html']
     }]
   ],
   locales: {
