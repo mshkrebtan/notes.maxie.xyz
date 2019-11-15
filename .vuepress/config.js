@@ -54,9 +54,7 @@ module.exports = {
               '/macos/batch-convert-doc-to-pdf-with-libreoffice'
             ]
           }
-        ],
-
-        lastUpdated: 'Last Updated'
+        ]
       },
       '/ru/': {
         selectText: 'Языки',
@@ -69,8 +67,7 @@ module.exports = {
               '/ru/macos/nalog-ru-digital-signature'
             ]
           }
-        ],
-        lastUpdated: 'Последнее обновление'
+        ]
       }
     }
   },
@@ -81,6 +78,13 @@ module.exports = {
     }
   },
   plugins: [
+    ['@vuepress/last-updated', {
+      transformer: (timestamp, lang) => {
+        const moment = require('moment')
+        moment.locale(lang)
+        return moment(timestamp).defaultFormatUtc
+      }
+    }],
     ['@vuepress/google-analytics', {
       'ga': 'UA-142563675-1'
     }],
@@ -93,6 +97,9 @@ module.exports = {
       },
       before: info => `<div class="output"><p class="title">${info}</p>`,
       after: '</div>',
+    }],
+    ['sitemap', {
+      'hostname': 'https://notes.maxie.xyz'
     }]
   ],
   locales: {
