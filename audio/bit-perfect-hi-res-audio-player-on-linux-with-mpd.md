@@ -3,6 +3,7 @@
 _Build a custom audiophile quality digital audio player with a Linux PC,
 MPD and a USB DAC._
 
+![Maxie's stereo system](./img/maxies-stereo-system.png)
 
 ## Problem
 
@@ -51,6 +52,7 @@ And it is free! Just as Linux.
 
 ## Prerequisites
 
+![Maxie's electronics](./img/maxies-stereo-system-electronics.png)
 
 ### Computer
 
