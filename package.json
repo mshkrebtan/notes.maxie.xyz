@@ -10,7 +10,7 @@
     "build": "vuepress build"
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "vuepress-plugin-container": "^2.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
