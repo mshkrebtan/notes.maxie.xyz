@@ -1,0 +1,29 @@
+---
+site_name: M. Shkrebtan
+repo_url: https://github.com/mshkrebtan/website
+repo_name: mshkrebtan/website
+docs_dir: notes
+edit_uri: edit/mkdocs/notes/
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.top
+  palette:
+    primary: white
+  custom_dir: overrides
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
