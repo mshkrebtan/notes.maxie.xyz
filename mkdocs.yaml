@@ -16,6 +16,17 @@ theme:
     primary: white
   custom_dir: overrides
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mshkrebtan
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mshkrebtan/
+    - icon: fontawesome/brands/square-lastfm
+      link: https://www.last.fm/user/MShkrebtan
+
+copyright: Copyright &copy; 2019–2023 Maksim Shkrebtan
+
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
