@@ -1,11 +1,16 @@
 ---
 comments: true
----
+...
 
 # Change Intel i915's PWM Frequency on Boot
 
-The problem with PWM frequency is described in ArchLinux Wiki:
-[Backlight](https://wiki.archlinux.org/index.php/backlight#Backlight_PWM_modulation_frequency_.28Intel_i915_only.29)
+The problem with PWM frequency is described in [ArchLinux
+Wiki](https://wiki.archlinux.org/index.php/backlight#Backlight_PWM_modulation_frequency_.28Intel_i915_only.29)[^archlinux-wiki].
+
+[^archlinux-wiki]: Backlight - ArchWiki, [no
+    date]. Online. [Accessed 9 June 2023]. Available from:
+    https://wiki.archlinux.org/title/backlight#Backlight_PWM_modulation_frequency_.28Intel_i915_only.29
+
 
 To set desired PWM frequency on boot, create a `systemd` service file:
 
@@ -36,22 +41,9 @@ systemctl enable pwmfrequency@0x7a107a1
 ```
 
 The hex number after the '@' symbol is the desired PWM frequency value. You can
-calculate it here: [Eliminate LED screen flicker with Intel
-i915](http://devbraindom.blogspot.ru/2013/03/eliminate-led-screen-flicker-with-intel.html).
+calculate it here: [Eliminate backlight flicker with Intel i915 |
+127.0.0.1](https://127001.me/post/eliminate-backlight-flicker-with-i915/)[^1].
 
-
-## References
-
-- Random thoughts: Eliminate LED screen flicker with Intel i915
-
-    <http://devbraindom.blogspot.com/2013/03/eliminate-led-screen-flicker-with-intel.html>
-
-<br/>
-<ClientOnly>
-<Disqus shortname="notes-maxie-xyz" language="en"/>
-</ClientOnly>
-
-<br/>
-<div style="text-align: center; font-size: x-small">
-    Allow loading scripts from disqus.com to see the comments.
-</div>
+[^1]: Eliminate backlight flicker with Intel i915 | 127.0.0.1, [no
+    date]. Online. [Accessed 9 June 2023]. Available from:
+    https://127001.me/post/eliminate-backlight-flicker-with-i915/
