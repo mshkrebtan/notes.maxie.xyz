@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Firefox and the Reasons to Like It
 
 - Reduces tracking and fingerprinting:

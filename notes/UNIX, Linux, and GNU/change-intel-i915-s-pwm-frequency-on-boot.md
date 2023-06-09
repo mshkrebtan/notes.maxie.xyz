@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Change Intel i915's PWM Frequency on Boot
 
 The problem with PWM frequency is described in ArchLinux Wiki:
