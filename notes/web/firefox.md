@@ -6,11 +6,11 @@ comments: true
 
 - Reduces tracking and fingerprinting:
 
-  - [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop);
+    - [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop);
 
-  - [arkenfox/user.js](https://github.com/arkenfox/user.js);
+    - [arkenfox/user.js](https://github.com/arkenfox/user.js);
 
-  - [uBlock Origin](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox)
+    - [uBlock Origin](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox)
     works best on Firefox.
 
 - [Skip Redirect](https://github.com/sblask/webextension-skip-redirect).
