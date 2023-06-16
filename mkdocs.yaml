@@ -1,9 +1,6 @@
 ---
 site_name: M. Shkrebtan
-repo_url: https://github.com/mshkrebtan/website
-repo_name: mshkrebtan/website
 docs_dir: notes
-edit_uri: edit/mkdocs/notes/
 
 theme:
   name: material
