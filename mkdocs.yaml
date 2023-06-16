@@ -48,6 +48,13 @@ extra:
 copyright: Copyright &copy; 2019–2023 Maksim Shkrebtan
 
 plugins:
+  - search:
+      lang:
+        - en
+        - de
+        - ru
+  - tags:
+      tags_file: index.md
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
