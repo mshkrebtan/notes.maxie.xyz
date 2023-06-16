@@ -24,8 +24,8 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-  logo: assets/photo-rembg.jpg
-  favicon: assets/photo-rembg.jpg
+  logo: assets/photo-rembg.webp
+  favicon: assets/photo-rembg.webp
   icon:
     repo: fontawesome/brands/github
   font: false
