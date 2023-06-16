@@ -1,5 +1,9 @@
 ---
 comments: true
+tags:
+  - web
+  - firefox
+  - privacy
 ---
 
 # Firefox and the Reasons to Like It

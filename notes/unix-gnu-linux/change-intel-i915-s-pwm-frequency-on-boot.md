@@ -1,6 +1,9 @@
 ---
 comments: true
-...
+tags:
+  - linux
+  - cli
+---
 
 # Change Intel i915's PWM Frequency on Boot
 
