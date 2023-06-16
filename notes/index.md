@@ -13,8 +13,8 @@ mine!
 Here I publish some of my personal notes on various topics. Feel free to read
 them, share with your friends and leave comments!
 
-To the right you will find an alphabetical index of tags for quicker
-navigation. Below you will also see all the pages that I put tags on.
+In the *Table of contents* section, you will find all the tags for quicker
+navigation. Below you will also see all the pages that I put tags on.
 
 ---
 
