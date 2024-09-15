@@ -18,6 +18,8 @@ At this website, I will be publishing notes on the topics that excite me, includ
 
 - audio;
 - ergonomics at work;
+- household improvements;
+- keyboards and layouts;
 - languages;
 - networking;
 - online privacy;
