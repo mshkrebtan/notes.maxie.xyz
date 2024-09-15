@@ -3,19 +3,30 @@ hide:
   - navigation
 ---
 
-# Welcome
+# About Me
 
-Hi!
+**My name is Maksim Shkrebtan. I am a software engineer, a husband and a father of 2 little girls.**
 
-My name is M. Shkrebtan. I am glad that you have stumbled across this website of
-mine!
+This is my personal website where I publish my notes, thoughts and whatnot.
+I sincerely believe that sharing knowledge leads humanity to a better future. And the more we share, the faster we get there.
 
-Here I publish some of my personal notes on various topics. Feel free to read
-them, share with your friends and leave comments!
+## What I Do
 
-In the *Table of contents* section, you will find all the tags for quicker
-navigation. Below you will also see all the pages that I put tags on.
+I am a software engineer focusing on **site reliability**. While I graduated from the university as an _information security_ specialist, my true passion has always been _networks_ and _operating systems_. My work includes managing application platforms (e.g. Kubernetes), configuring internetworks (Site-to-Site VPN, IPsec, GRE, VLAN) and providing observability of distributed systems. Check my [LinkedIn profile](https://linkedin.com/in/mshkrebtan) if you want to know more!
+
+At this website, I will be publishing notes on the topics that excite me, including:
+
+- audio;
+- ergonomics at work;
+- languages;
+- networking;
+- online privacy;
+- operating systems;
+- professional tools (Unix shells, Emacs);
+- typesetting (ebooks, LaTeX);
+- and many others.
 
 ---
-
+## All Pages and Tags
+Below you will see all the pages that I have already published, grouped by tags.
 [TAGS]
