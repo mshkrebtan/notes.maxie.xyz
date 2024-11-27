@@ -1,8 +1,9 @@
 ---
 comments: true
 tags:
-  - linguistics
   - books
+  - deutsch
+  - linguistics
 ---
 
 # Der oberdeutsche Präteritumschwund

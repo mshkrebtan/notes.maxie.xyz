@@ -2,7 +2,7 @@
 comments: true
 tags:
   - linux
-  - cli
+  - thinkpad
 ---
 
 # Change Intel i915's PWM Frequency on Boot

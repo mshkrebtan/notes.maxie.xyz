@@ -1,8 +1,8 @@
 ---
 comments: true
 tags:
-  - books
-  - cli
+  - e-books
+  - kindle
 ---
 
 # The Best Way to Convert FB2 to MOBI

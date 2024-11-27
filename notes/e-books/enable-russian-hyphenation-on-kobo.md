@@ -1,3 +1,10 @@
+---
+comments: true
+tags:
+  - e-books
+  - kobo
+---
+
 # Enable Russian Hyphenation on Kobo
 
 If you add a book in Russian onto your Kobo e-reader, you may notice that, when text justification is enabled, there are large, uneven spaces between words and no hyphenation is used. The reason for this is that, by default, Kobo e-readers do not have Russian hyphenation dictionaries installed.

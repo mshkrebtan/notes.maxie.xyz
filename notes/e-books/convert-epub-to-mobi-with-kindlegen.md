@@ -1,3 +1,10 @@
+---
+comments: true
+tags:
+  - e-books
+  - kindle
+---
+
 # Convert ePub to MOBI with KindleGen
 
 KindleGen is an official Amazon’s converter. KindleGen is pretty easy to use.
